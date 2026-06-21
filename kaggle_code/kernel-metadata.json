@@ -1,5 +1,5 @@
 {
-  "id": "byeonggeongo/global-temperature-trend-eda",
+  "id": "gobyeonggeon/global-temperature-trend-eda",
   "title": "Global Temperature Trends: Multi-Source EDA",
   "code_file": "global_temperature_analysis.ipynb",
   "language": "python",
@@ -8,7 +8,7 @@
   "enable_gpu": false,
   "enable_internet": true,
   "dataset_sources": [
-    "byeonggeongo/global-temperature-trend-source-samples"
+    "gobyeonggeon/global-temperature-trend-source-samples"
   ],
   "competition_sources": [],
   "kernel_sources": []
