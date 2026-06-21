@@ -4,7 +4,6 @@ __pycache__/
 venv/
 env/
 *.pyc
-analysis_outputs/
 temperature_dataset_samples/noaa_globaltemp_gridded_latest.nc
 .kaggle/
 

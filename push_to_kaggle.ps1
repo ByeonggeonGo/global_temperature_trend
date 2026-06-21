@@ -7,18 +7,18 @@ param(
 $ErrorActionPreference = "Stop"
 
 Write-Host "Checking Kaggle authentication..."
-kaggle config view | Out-Host
+python -m kaggle config view | Out-Host
 
 if ($CreateDataset) {
-  kaggle datasets create -p kaggle_dataset
+  python -m kaggle datasets create -p kaggle_dataset
 }
 
 if ($VersionDataset) {
-  kaggle datasets version -p kaggle_dataset -m "Update global temperature source samples"
+  python -m kaggle datasets version -p kaggle_dataset -m "Update global temperature source samples"
 }
 
 if ($PushNotebook) {
-  kaggle kernels push -p kaggle_code
+  python -m kaggle kernels push -p kaggle_code
 }
 
 if (-not ($CreateDataset -or $VersionDataset -or $PushNotebook)) {

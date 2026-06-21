@@ -32,6 +32,35 @@ Using annual means rebased to `1991-2020`, the estimated global warming trend si
 
 The exact values will update as source datasets are refreshed, but the conclusion is robust: independent global products agree on a strong post-1970 warming trend.
 
+## Key Visualization & Analysis Results
+
+This repository produces several key figures illustrating different aspects of global temperature change. Below is a summary of the core findings:
+
+### 1. Global Annual Temperature Anomaly Comparison
+This plot compares the rebased (1991-2020) annual anomaly time series across NASA GISTEMP, NOAA GlobalTemp, HadCRUT5, and Berkeley Earth. It shows strong coherence in global mean trends, highlighting that post-1970 warming is consistently captured by all major data providers.
+
+![Global Annual Anomaly Comparison](./analysis_outputs/global_annual_anomaly_comparison.png)
+
+### 2. Rolling 30-Year Warming Trends
+By calculating trends on moving 30-year windows, we observe the acceleration of global warming. The rate of temperature increase has nearly doubled, rising from around 0.1°C/decade in early 30-year periods to approximately 0.2°C/decade in recent decades.
+
+![Rolling 30-Year Trends](./analysis_outputs/rolling_30_year_trends.png)
+
+### 3. Regional Warming Trends Map (NOAA GlobalTemp)
+Using NOAA's 5°x5° gridded NetCDF dataset, we map the local warming trends (1970-present) onto political boundaries. The map highlights that land masses, particularly in the high-latitude Northern Hemisphere (Arctic and sub-Arctic), are warming much faster than the oceans (a phenomenon known as land-sea warming contrast and polar amplification).
+
+![Regional Country Trends](./analysis_outputs/regional_country_trends_noaa_globaltemp.png)
+
+### 4. Top 15 Fastest Warming Countries
+A detailed breakdown of warming rates by country, showcasing the nations experiencing the steepest temperature rises since 1970. Northern hemisphere inland countries like Belarus, Moldova, Iraq, and Hungary lead the trend.
+
+![Top Warming Countries](./analysis_outputs/top_warming_countries.png)
+
+### 5. NASA GISTEMP Monthly Anomaly Heatmap
+This heatmap illustrates the distribution of monthly temperature anomalies over the years. It clearly displays the shift from blue/neutral anomalies to intense red anomalies in the 21st century, illustrating both the rise in baseline temperatures and the increasing frequency of warm extremes.
+
+![NASA Monthly Anomaly Heatmap](./analysis_outputs/nasa_monthly_anomaly_heatmap.png)
+
 ## Repository Structure
 
 ```text
