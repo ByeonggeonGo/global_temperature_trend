@@ -1,6 +1,6 @@
-# Global Temperature Trend EDA
+# Global Warming Acceleration & Committed Warming: Multi-Source Hemispheric Asymmetry and 3-Box EBM Simulation with Ocean Solubility Feedback
 
-Multi-source exploratory data analysis of global surface temperature anomalies, with trend, volatility, uncertainty, and optional regional geospatial analysis.
+Multi-source exploratory data analysis and thermodynamic modeling of global surface temperature anomalies, verifying hemispheric asymmetry and simulating the committed warming effect of ocean solubility feedback.
 
 This project compares four widely used global temperature products:
 
@@ -60,6 +60,13 @@ A detailed breakdown of warming rates by country, showcasing the nations experie
 This heatmap illustrates the distribution of monthly temperature anomalies over the years. It clearly displays the shift from blue/neutral anomalies to intense red anomalies in the 21st century, illustrating both the rise in baseline temperatures and the increasing frequency of warm extremes.
 
 ![NASA Monthly Anomaly Heatmap](./analysis_outputs/nasa_monthly_anomaly_heatmap.png)
+
+### 6. Hemispheric Warming Simulation & Ocean Solubility Feedback
+We implement a physical 3-Box Energy Balance Model (EBM) to simulate hemispheric asymmetry (NH vs SH) based on land-ocean fraction and effective heat capacity differences (NH is ~39.4% land, SH is ~19.0% land, making SH's effective heat capacity ~1.33x larger). Additionally, we model the positive carbon solubility feedback (where a warming ocean releases CO2 and decreases its sink capacity). The simulation reveals that even if greenhouse forcing is stabilized post-2025, temperatures continue to rise toward a higher equilibrium (committed warming), and the land-ocean warming contrast gradually narrows.
+
+![Hemispheric Simulation Trend](./analysis_outputs/hemispheric_simulation_trend.png)
+
+![Land Ocean Thermal Inertia](./analysis_outputs/land_ocean_thermal_inertia_sim.png)
 
 ## Repository Structure
 
