@@ -71,7 +71,7 @@ Then open:
 jupyter notebook global_temperature_analysis.ipynb
 ```
 
-The global EDA runs from the small downloaded source files. The regional GeoPandas section downloads an additional NOAA gridded NetCDF file of about 22 MB on first run.
+The global EDA runs from the small downloaded source files. The regional GeoPandas section downloads an additional NOAA gridded NetCDF file of about 22 MB on first run and reads it with `netCDF4`.
 
 ## Kaggle Publishing Plan
 
@@ -108,4 +108,3 @@ Authentication requires either `~/.kaggle/kaggle.json` or environment variables 
 ## Licensing and Attribution
 
 This repository contains scripts, notebooks, and small source-data samples for reproducible analysis. Upstream datasets have their own licenses and citation requirements. Cite the original providers when reusing the data or results.
-
