@@ -13,8 +13,6 @@ The main notebook is [`global_temperature_analysis.ipynb`](global_temperature_an
 
 ## Project Goals
 
-This repository is built for a public GitHub and Kaggle workflow:
-
 1. Verify that the source datasets are reachable and parseable.
 2. Standardize the datasets onto a common `1991-2020` anomaly baseline.
 3. Compare long-term and recent warming trends across independent products.
@@ -72,29 +70,6 @@ jupyter notebook global_temperature_analysis.ipynb
 ```
 
 The global EDA runs from the small downloaded source files. The regional GeoPandas section downloads an additional NOAA gridded NetCDF file of about 22 MB on first run and reads it with `netCDF4`.
-
-## Kaggle Publishing Plan
-
-Kaggle treats data and notebooks as separate objects:
-
-- **Kaggle Dataset**: files under `kaggle_dataset/`
-- **Kaggle Code / Notebook**: files under `kaggle_code/`
-
-After Kaggle authentication is configured, publish with:
-
-```bash
-kaggle datasets create -p kaggle_dataset
-kaggle kernels push -p kaggle_code
-```
-
-For updates:
-
-```bash
-kaggle datasets version -p kaggle_dataset -m "Update source samples"
-kaggle kernels push -p kaggle_code
-```
-
-Authentication requires either `~/.kaggle/kaggle.json` or environment variables `KAGGLE_USERNAME` and `KAGGLE_KEY`.
 
 ## Data Sources
 
