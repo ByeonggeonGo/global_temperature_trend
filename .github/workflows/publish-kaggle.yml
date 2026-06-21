@@ -1,0 +1,56 @@
+name: Publish to Kaggle
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish_dataset:
+        description: "Create or version the Kaggle dataset"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      publish_notebook:
+        description: "Push the Kaggle notebook"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+  push:
+    branches:
+      - main
+    paths:
+      - "global_temperature_analysis.ipynb"
+      - "kaggle_code/**"
+      - "kaggle_dataset/**"
+      - ".github/workflows/publish-kaggle.yml"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+      KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Kaggle CLI
+        run: pip install kaggle
+
+      - name: Publish dataset
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.publish_dataset == 'true'
+        run: |
+          kaggle datasets status byeonggeongo/global-temperature-trend-source-samples \
+            && kaggle datasets version -p kaggle_dataset -m "Update global temperature source samples" \
+            || kaggle datasets create -p kaggle_dataset
+
+      - name: Push notebook
+        if: github.event_name == 'push' || github.event.inputs.publish_notebook == 'true'
+        run: kaggle kernels push -p kaggle_code

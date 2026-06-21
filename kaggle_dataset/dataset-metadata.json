@@ -1,0 +1,12 @@
+{
+  "title": "Global Temperature Trend Source Samples",
+  "id": "byeonggeongo/global-temperature-trend-source-samples",
+  "licenses": [
+    {
+      "name": "other"
+    }
+  ],
+  "subtitle": "Small source files for multi-dataset global temperature trend EDA",
+  "description": "Source samples and verification results for a global temperature trend analysis comparing NASA GISTEMP, NOAA GlobalTemp, HadCRUT5, and Berkeley Earth. Original providers and licenses should be cited when reusing the data."
+}
+

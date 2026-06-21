@@ -1,0 +1,81 @@
+[
+  {
+    "name": "NASA GISTEMP v4 global LOTI",
+    "source_page": "https://data.giss.nasa.gov/gistemp/data_v4.html",
+    "checked_at": "2026-06-21T06:16:58.660527+00:00",
+    "status": "ok",
+    "url": "https://data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv",
+    "saved_to": "temperature_dataset_samples\\nasa_gistemp_global_loti.csv",
+    "bytes": 12883,
+    "rows": 147,
+    "start": 1880,
+    "end": 2026,
+    "columns": [
+      "Year",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+      "J-D",
+      "D-N",
+      "DJF",
+      "MAM",
+      "JJA",
+      "SON"
+    ],
+    "latest_annual_anomaly_c": "***"
+  },
+  {
+    "name": "NOAA GlobalTemp v6.1 global land-ocean",
+    "source_page": "https://www.ncei.noaa.gov/products/land-based-station/noaa-global-temp",
+    "checked_at": "2026-06-21T06:16:59.753172+00:00",
+    "status": "ok",
+    "url": "https://www.ncei.noaa.gov/data/noaa-global-surface-temperature/v6.1/access/timeseries/aravg.mon.land_ocean.90S.90N.v6.1.0.202605.asc",
+    "saved_to": "temperature_dataset_samples\\noaa_globaltemp_v6_1_land_ocean_global.asc",
+    "bytes": 220168,
+    "rows": 2117,
+    "start": "1850-01",
+    "end": "2026-05",
+    "latest_anomaly_c": "0.479752"
+  },
+  {
+    "name": "HadCRUT5 analysis global monthly",
+    "source_page": "https://www.metoffice.gov.uk/hadobs/hadcrut5/",
+    "checked_at": "2026-06-21T06:17:02.869669+00:00",
+    "status": "ok",
+    "url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.1.0.0/analysis/diagnostics/HadCRUT.5.1.0.0.analysis.summary_series.global.monthly.csv",
+    "saved_to": "temperature_dataset_samples\\hadcrut5_5_1_global_monthly.csv",
+    "bytes": 89425,
+    "rows": 2115,
+    "start": "1850-01",
+    "end": "2026-03",
+    "columns": [
+      "Time",
+      "Anomaly (deg C)",
+      "Lower confidence limit (2.5%)",
+      "Upper confidence limit (97.5%)"
+    ],
+    "latest_anomaly_c": "1.0496206"
+  },
+  {
+    "name": "Berkeley Earth high-resolution global monthly",
+    "source_page": "https://berkeleyearth.org/data/",
+    "checked_at": "2026-06-21T06:17:03.487244+00:00",
+    "status": "ok",
+    "url": "https://storage.googleapis.com/berkeley-earth-temperature-hr/global/Global_TAVG_monthly.txt",
+    "saved_to": "temperature_dataset_samples\\berkeley_earth_hr_global_monthly.txt",
+    "bytes": 213024,
+    "rows": 2117,
+    "start": "1850-01",
+    "end": "2026-05",
+    "latest_anomaly_c": "1.113"
+  }
+]
