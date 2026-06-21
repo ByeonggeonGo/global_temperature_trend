@@ -45,12 +45,16 @@ jobs:
         run: pip install kaggle
 
       - name: Publish dataset
-        if: github.event_name == 'workflow_dispatch' && github.event.inputs.publish_dataset == 'true'
+        if: env.KAGGLE_USERNAME != '' && env.KAGGLE_KEY != '' && github.event_name == 'workflow_dispatch' && github.event.inputs.publish_dataset == 'true'
         run: |
           kaggle datasets status byeonggeongo/global-temperature-trend-source-samples \
             && kaggle datasets version -p kaggle_dataset -m "Update global temperature source samples" \
             || kaggle datasets create -p kaggle_dataset
 
       - name: Push notebook
-        if: github.event_name == 'push' || github.event.inputs.publish_notebook == 'true'
+        if: env.KAGGLE_USERNAME != '' && env.KAGGLE_KEY != '' && (github.event_name == 'push' || github.event.inputs.publish_notebook == 'true')
         run: kaggle kernels push -p kaggle_code
+
+      - name: Skip notice
+        if: env.KAGGLE_USERNAME == '' || env.KAGGLE_KEY == ''
+        run: echo "Kaggle secrets are not configured. Skipping Kaggle publish."
