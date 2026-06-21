@@ -1,0 +1,25 @@
+FROM python:3.12-slim
+
+# Install system dependencies required for geopandas and netcdf4
+RUN apt-get update && apt-get install -y \
+    binutils \
+    libproj-dev \
+    gdal-bin \
+    libgdal-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install python packages required for the project (matching Kaggle environments)
+RUN pip install --no-cache-dir \
+    pandas \
+    numpy \
+    matplotlib \
+    seaborn \
+    scipy \
+    requests \
+    jupyter \
+    geopandas \
+    netCDF4 \
+    shapely \
+    pyogrio
+
+WORKDIR /tmp/working
